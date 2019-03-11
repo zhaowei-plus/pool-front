@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+        div {
+            padding: 10px;
+            box-sizing: border-box;
+            color: gray;
+        }
+
+        /*表示同时有 a b，和顺序无关*/
+        .a.b {
+            background-color: yellow;
+        }
+        /*表示同时有 a b，和顺序无关*/
+        .b.a{
+            background-color: black;
+        }
+        .a .b {
+            background-color: yellowgreen;
+        }
+        .b .a {
+            background-color: blue;
+        }
+        .a {
+            background-color: red;
+        }
+        .b {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="a b">a b</div>
+    <div class="b a">b a</div>
+
+    <div class="a">
+        aaaaa
+        <div class="b">a - b</div>
+    </div>
+
+    <div class="b">
+        bbbbb
+        <div class="a">b - a</div>
+    </div>
+</div>
+</body>
+</html>

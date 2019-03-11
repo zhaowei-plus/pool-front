@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <style>
+        div {
+            width: 80%;
+            min-height: 50px;
+            padding: 10px;
+            margin: 10px auto;
+            padding: 10px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .a { background-color: green; }
+        .b { background-color: red; }
+
+        .a .b { background-color: blue; }
+        .b .a { background-color: black; }
+        .a.b { background-color: gray; }
+        .b.a { background-color: aqua; }
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <button id="addInput">增加</button>
+</div>
+
+<div class="c b a">匹配规则c，背景为黄色</div>
+<div class="a b c">匹配规则c，背景为黄色</div>
+<div class="c a b">匹配规则c，背景为黄色</div>
+
+<div class="a b">a b</div>
+<div class="b a">b a</div>
+
+<div class="a">a
+    <div class="b">b</div>
+</div>
+
+<div class="b">b
+    <div class="a">a</div>
+</div>
+
+
+</body>
+</html>
