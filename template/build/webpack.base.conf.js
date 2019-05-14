@@ -8,8 +8,8 @@ function resolve(dir) {
 }
 
 let entry = {}
-pageConfig.pages.forEach((page,index) => {
-  entry[page] = `./src/js/${page}.js`;
+pageConfig.pages.forEach((page) => {
+  entry[page] = `./src/pages/${page}/index.js`;
 });
 
 module.exports = {
@@ -22,7 +22,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json'],
     alias: {
-      'src': resolve('src')
+      src: resolve('src'),
+      components: resolve('src/components')
     }
   },
   module: {

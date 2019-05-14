@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%=require('html-loader!../../components/header/index.html')%>
+
+<div id="app">
+    <div class="wrap">
+        <div class="text">
+            你好，hello world闻内容你好，hello world我是新闻hello world我是新闻内容你好，我是新闻内
+            容你好，我是新内容你好hello world，我是新
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="text">
+            你好，我是新闻内容你好，我是新闻内容你好，我是新闻内容你好，我是新闻内
+            容你好，我是新闻内容你好，我是新闻内容你好，我是新闻内容你好，我是新闻
+            内容你好，我是新闻内容你好，我是新闻内容你好，我是新闻内容你好，我是新
+            闻内容你好，我是新闻内容你好，我是新
+        </div>
+    </div>
+
+    <div class="ellipsis">
+        <p>
+            上水一幅小型住宅地今日中午截標。現場所見，截至中午12時，最少接獲14份標書，
+            包括其士國際(00025.HK)、宏安地產(01243.HK)、華寶實業、建灝地產
+        </p>
+        <span class="ellipsis-after">...</span>
+    </div>
+</div>
+
+<%=require('html-loader!../../components/footer/index.html')%>
+</body>
+</html>

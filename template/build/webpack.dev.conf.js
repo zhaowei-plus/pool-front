@@ -10,7 +10,7 @@ let HTMLPlugins = [];
 pageConfig.pages.forEach((page, index) => {
   const htmlPlugin = new HtmlWebpackPlugin({
     filename: `${page}.html`,
-    template: `./src/pages/${page}.html`,
+    template: `./src/pages/${page}/index.hbs`,
     inject: true,
     chunks: [`${page}`, 'vendor', 'manifest'],
   });
